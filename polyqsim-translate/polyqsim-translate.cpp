@@ -22,8 +22,10 @@
 #include "llvm/Support/SourceMgr.h"
 #include "llvm/Support/raw_ostream.h"
 
+#include "Polyqsim/PolyqsimOpsDialect.cpp.inc"
+
+
 int main(int argc, char **argv) {
-  mlir::registerAllTranslations();
 
   // TODO: Register standalone translations here.
   mlir::TranslateToMLIRRegistration toPolyqsimDialect(
