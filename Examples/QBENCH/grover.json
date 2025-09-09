@@ -1,0 +1,178 @@
+{
+  "qasm_version": "2.0",
+  "header": {
+    "name": "circuit-166",
+    "global_phase": 0.0,
+    "metadata": {}
+  },
+  "registers": {
+    "qubits": {
+      "q": 2
+    },
+    "clbits": {
+      "c": 2
+    }
+  },
+  "operations": [
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "sx",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[0]",
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        -1.5707963267948966
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "sx",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "sx",
+      "params": [],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        -1.5707963267948966
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[0]",
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "sx",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        -1.5707963267948966
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        -3.141592653589793
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "measure",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": [
+        "c[0]"
+      ]
+    },
+    {
+      "name": "measure",
+      "params": [],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": [
+        "c[1]"
+      ]
+    }
+  ]
+}

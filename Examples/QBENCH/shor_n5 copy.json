@@ -1,0 +1,870 @@
+{
+  "qasm_version": "2.0",
+  "header": {
+    "name": "circuit-167",
+    "global_phase": 0.0,
+    "metadata": {}
+  },
+  "registers": {
+    "qubits": {
+      "q": 5
+    },
+    "clbits": {
+      "c": 5
+    }
+  },
+  "operations": [
+    {
+      "name": "x",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "measure",
+      "params": [],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": [
+        "c[0]"
+      ]
+    },
+    {
+      "name": "reset",
+      "params": [],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "sx",
+      "params": [],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[0]",
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "sx",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[1]",
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        -0.7853981633974483
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "if_else",
+      "params": [
+        "     \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n  0: \u2524 Rz(\u03c0/2) \u251c\n     \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\nc: 5/\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n                ",
+        "None"
+      ],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": [
+        "c[0]",
+        "c[1]",
+        "c[2]",
+        "c[3]",
+        "c[4]"
+      ]
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "sx",
+      "params": [],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "measure",
+      "params": [],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": [
+        "c[1]"
+      ]
+    },
+    {
+      "name": "reset",
+      "params": [],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "sx",
+      "params": [],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        0.7853981633974483
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[1]",
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        -0.7853981633974483
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        0.7853981633974483
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        2.356194490192345
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "sx",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        -0.7853981633974483
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        0.7853981633974483
+      ],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[0]",
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[1]",
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "sx",
+      "params": [],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[2]",
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        -0.7853981633974483
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        0.7853981633974483
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[2]",
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        -0.7853981633974483
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        0.7853981633974483
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        2.356194490192345
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "sx",
+      "params": [],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        -0.7853981633974483
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        0.7853981633974483
+      ],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[1]",
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[2]",
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "sx",
+      "params": [],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[3]",
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        -0.7853981633974483
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        0.7853981633974483
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[3]",
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        -0.7853981633974483
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        0.7853981633974483
+      ],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        2.356194490192345
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "sx",
+      "params": [],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        -0.7853981633974483
+      ],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        0.7853981633974483
+      ],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[2]",
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "cx",
+      "params": [],
+      "qargs": [
+        "q[4]",
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "if_else",
+      "params": [
+        "     \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n  0: \u2524 Rz(3\u03c0/4) \u251c\n     \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\nc: 5/\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n                 ",
+        "None"
+      ],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": [
+        "c[0]",
+        "c[1]",
+        "c[2]",
+        "c[3]",
+        "c[4]"
+      ]
+    },
+    {
+      "name": "if_else",
+      "params": [
+        "     \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n  0: \u2524 Rz(\u03c0/2) \u251c\n     \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\nc: 5/\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n                ",
+        "None"
+      ],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": [
+        "c[0]",
+        "c[1]",
+        "c[2]",
+        "c[3]",
+        "c[4]"
+      ]
+    },
+    {
+      "name": "if_else",
+      "params": [
+        "     \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n  0: \u2524 Rz(\u03c0/4) \u251c\n     \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\nc: 5/\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n                ",
+        "None"
+      ],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": [
+        "c[0]",
+        "c[1]",
+        "c[2]",
+        "c[3]",
+        "c[4]"
+      ]
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "sx",
+      "params": [],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "rz",
+      "params": [
+        1.5707963267948966
+      ],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": []
+    },
+    {
+      "name": "measure",
+      "params": [],
+      "qargs": [
+        "q[4]"
+      ],
+      "cargs": [
+        "c[2]"
+      ]
+    }
+  ]
+}

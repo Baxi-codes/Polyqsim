@@ -1,0 +1,895 @@
+{
+  "qasm_version": "2.0",
+  "header": {
+    "name": "circuit-166",
+    "global_phase": 0.0,
+    "metadata": {}
+  },
+  "registers": {
+    "qubits": {
+      "q": 4,
+      "q1": 1
+    },
+    "clbits": {
+      "meas": 4
+    }
+  },
+  "operations": [
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q1[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        5.0300511584448
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        2.61519568487349
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        5.36606826220224
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        0.667082990176662
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "cx",
+      "params": [],
+      "qargs": [
+        "q[0]",
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        4.09739784898316
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        1.92219255913748
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        3.20626074964735
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        0.571219981217032
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "cx",
+      "params": [],
+      "qargs": [
+        "q[1]",
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        4.79016360412963
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        0.438232887845333
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "cx",
+      "params": [],
+      "qargs": [
+        "q[0]",
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        4.57437876552885
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        1.86112525741656
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        6.18865431978628
+      ],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        0.576182260790784
+      ],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "cx",
+      "params": [],
+      "qargs": [
+        "q[2]",
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        4.49858795091057
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        0.917799481623813
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "cx",
+      "params": [],
+      "qargs": [
+        "q[1]",
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        5.60829568567739
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        0.145928275357359
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "cx",
+      "params": [],
+      "qargs": [
+        "q[0]",
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        3.34595826021666
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        0.956972379417358
+      ],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        4.05651598094723
+      ],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        1.15095967544708
+      ],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "cx",
+      "params": [],
+      "qargs": [
+        "q[2]",
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        3.76888634073298
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        1.90865844345986
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "cx",
+      "params": [],
+      "qargs": [
+        "q[1]",
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        6.12260448652247
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        0.30684599582304
+      ],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        4.75710778753287
+      ],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        0.535717334235832
+      ],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "cx",
+      "params": [],
+      "qargs": [
+        "q[2]",
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        6.17521515476781
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        2.1495814494341
+      ],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        5.68124782361394
+      ],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "sx",
+      "params": [],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        9.42477796076938
+      ],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "rz",
+      "params": [
+        1.38277984079156
+      ],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "barrier",
+      "params": [],
+      "qargs": [
+        "q[0]",
+        "q[1]",
+        "q[2]",
+        "q[3]"
+      ],
+      "cargs": []
+    },
+    {
+      "opname": "measure",
+      "params": [],
+      "qargs": [
+        "q[0]"
+      ],
+      "cargs": [
+        "meas[0]"
+      ]
+    },
+    {
+      "opname": "measure",
+      "params": [],
+      "qargs": [
+        "q[1]"
+      ],
+      "cargs": [
+        "meas[1]"
+      ]
+    },
+    {
+      "opname": "measure",
+      "params": [],
+      "qargs": [
+        "q[2]"
+      ],
+      "cargs": [
+        "meas[2]"
+      ]
+    },
+    {
+      "opname": "measure",
+      "params": [],
+      "qargs": [
+        "q[3]"
+      ],
+      "cargs": [
+        "meas[3]"
+      ]
+    }
+  ]
+}

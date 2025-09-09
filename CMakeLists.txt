@@ -37,7 +37,18 @@ set(LLVM_LIT_ARGS "-sv" CACHE STRING "lit default options")
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/modules")
 include(sanitizers)
 
+# Json Parser nlohmann/json v3.12.0
+include(FetchContent)
+
+FetchContent_Declare(json URL https://github.com/nlohmann/json/releases/download/v3.12.0/json.tar.xz)
+FetchContent_MakeAvailable(json)
+
+# add_executable(example example.cpp)
+# target_link_libraries(example PRIVATE nlohmann_json::nlohmann_json)
+
+
 add_subdirectory(include)
 add_subdirectory(lib)
 add_subdirectory(polyqsim-opt)
 add_subdirectory(polyqsim-translate)
+add_subdirectory(tools/Json_to_mlir)
