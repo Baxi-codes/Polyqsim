@@ -15,13 +15,6 @@
 #include "mlir/Interfaces/SideEffectInterfaces.h"
 #include "mlir/Transforms/InliningUtils.h"
 
-// // Forward-declare the types.
-// namespace qasm {
-// class QubitType;
-// class QRegType;
-// class CRegType;
-// } // namespace qasm
-
 #include "QASM/QASMDialect.h.inc"
 
 #define GET_TYPEDEF_CLASSES

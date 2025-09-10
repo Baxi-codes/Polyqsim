@@ -17,8 +17,23 @@ using namespace qasm;
 #include "llvm/ADT/TypeSwitch.h"
 #include "llvm/Support/Debug.h"
 
+#define GET_DIALECT_CLASSES
+#include "QASM/QASMDialect.cpp.inc"
+
 #define GET_TYPEDEF_CLASSES
 #include "QASM/QASMTypes.cpp.inc"
+
+// Define a helper function to create a zero-initialised value.
+static mlir::Attribute ZeroInitValue(mlir::Type type) {
+  if (auto integerType = mlir::dyn_cast<mlir::IntegerType>(type))
+    return mlir::IntegerAttr::get(integerType, 0);
+
+  return {};
+}
+
+// The generated code for the operations themselves.
+#define GET_OP_CLASSES
+#include "QASM/QASMOps.cpp.inc"
 
 //===----------------------------------------------------------------------===//
 // QASMDialect
@@ -38,5 +53,4 @@ void QASMDialect::initialize() {
       >();
 }
 
-#define GET_DIALECT_CLASSES
-#include "QASM/QASMDialect.cpp.inc"
+//===----------------------------------------------------------------------===//

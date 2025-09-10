@@ -4,8 +4,8 @@
 # Add the dialect library.
 add_mlir_dialect_library(MLIRQASM
   QASMDialect.cpp
-  QASMOps.cpp
-  QASMTypes.cpp
+  # QASMOps.cpp
+  # QASMTypes.cpp
 
   DEPENDS MLIRQASMIncGen
   LINK_COMPONENTS

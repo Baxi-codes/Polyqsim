@@ -6,10 +6,6 @@
 //===----------------------------------------------------------------===//
 
 #include "QASM/QASM.h"
-// #include "QASM/QASM.h"
-// #include "QASM/QASMDialect.h"
-// #include "QASM/QASMOps.h"
-// #include "QASM/QASMTypes.h"
 
 #include "mlir/Dialect/Arith/IR/Arith.h"
 #include "mlir/Dialect/Func/IR/FuncOps.h"
@@ -42,14 +38,6 @@
 using namespace mlir;
 using namespace qasm;
 using json = nlohmann::json;
-#include <fstream>
-#include <iostream>
-#include <map>
-#include <string>
-
-using namespace mlir;
-using namespace qasm;
-using json = nlohmann::json;
 
 // Function to register the custom QASM dialect.
 void registerQASMDialect(DialectRegistry &registry) {
@@ -65,6 +53,14 @@ ModuleOp translateQASMJsonToMLIR(json &jsonData, MLIRContext *context) {
   // Set the insertion point to the start of the module.
   builder.setInsertionPointToStart(module.getBody());
 
+  // Create a main function and add an entry block.
+  auto funcOp = builder.create<mlir::func::FuncOp>(
+      builder.getUnknownLoc(), "main", builder.getFunctionType({}, {}));
+
+  // Set the insertion point to the start of the function's entry block.
+  // This is the key fix to place all subsequent ops inside the function.
+  builder.setInsertionPointToStart(funcOp.addEntryBlock());
+
   // Store register values to use later in operations.
   std::map<std::string, Value> registers;
 
@@ -78,13 +74,22 @@ ModuleOp translateQASMJsonToMLIR(json &jsonData, MLIRContext *context) {
           builder.getUnknownLoc(),
           QRegType::get(context, sizeJson.get<uint64_t>()),
           sizeJson.get<uint64_t>());
-      registers[name] = qRegOp.getResult();
+      // registers[name] = qRegOp.getResult();
       std::cout << "Created quantum register: " << name << " of size "
                 << sizeJson.get<uint64_t>() << "\n";
       qRegOp->dump();
+      // here extract all the qubits from the qreg and store them in the
+      // registers map
+      // for (uint64_t i = 0; i < sizeJson.get<uint64_t>(); ++i) {
+      //   auto qubit = builder.create<QRegExtractOp>(
+      //       builder.getUnknownLoc(), QubitType::get(context), qRegOp, i);
+      //   std::string qubitName = name + "[" + std::to_string(i) + "]";
+      //   registers[qubitName] = qubit.getResult();
+      //   std::cout << "Created qubit: " << qubitName << "\n";
+      //   qubit->dump();
+      // }
     }
   }
-  // return module;
 
   // Process classical registers.
   if (registersData.count("clbits") && registersData["clbits"].is_object()) {
@@ -93,18 +98,41 @@ ModuleOp translateQASMJsonToMLIR(json &jsonData, MLIRContext *context) {
           builder.getUnknownLoc(),
           CRegType::get(context, sizeJson.get<uint64_t>()),
           sizeJson.get<uint64_t>());
-      registers[name] = cRegOp.getResult();
-      std::cout << "Created classical register: " << name << " of size "
-                << sizeJson.get<uint64_t>() << "\n";
-      cRegOp->dump();
+      // registers[name] = cRegOp.getResult();
+      // std::cout << "Created classical register: " << name << " of size "
+      //           << sizeJson.get<uint64_t>() << "\n";
+      // cRegOp->dump();
+
+      // here extract all the cregs from the creg and store them in the
+      // registers map
+
+      // for (uint64_t i = 0; i < sizeJson.get<uint64_t>(); ++i) {
+      //   auto creg = builder.create<CRegExtractOp>(
+      //       builder.getUnknownLoc(), CBitType::get(context), cRegOp, i);
+      //   std::string cregName = name + "[" + std::to_string(i) + "]";
+      //   registers[cregName] = creg.getResult();
+      //   std::cout << "Created creg: " << cregName << "\n";
+      //   creg->dump();
+      // }
     }
   }
-
+  std::cout << "Total registers created: " << registers.size() << "\n";
   // Process operations.
+  module->dump();
   json &operationsData = jsonData["operations"];
+  // check if operationsData is an array
+  if (!operationsData.is_array()) {
+    llvm::errs() << "Expected 'operations' to be an array.\n";
+    return nullptr;
+  }
+  operationsData.dump();
+  std::cout << "Total operations to process: " << operationsData.size() << "\n";
   for (const auto &op : operationsData) {
+    std::string temp;
+    std::cin >> temp;
     std::string opname = op["opname"].get<std::string>();
-
+    std::cout << "Processing operation: " << op.dump(4) << "\n";
+    std::cout << "Operation name: " << opname << "\n";
     if (opname == "sx") {
       std::string qubitName = op["qargs"][0].get<std::string>();
       if (registers.count(qubitName)) {
@@ -123,35 +151,25 @@ ModuleOp translateQASMJsonToMLIR(json &jsonData, MLIRContext *context) {
             registers[qubitName], builder.getF64FloatAttr(angle));
         std::cout << "Created RZ operation on qubit: " << qubitName
                   << " with angle: " << angle << "\n";
-        rzop->dump();
+        // rzop->dump();
+      }
+    } else if (opname == "measure") {
+      std::string qubitName = op["qargs"][0].get<std::string>();
+      std::string cregName = op["cargs"][0].get<std::string>();
+      if (registers.count(qubitName) && registers.count(cregName)) {
+        auto measure = builder.create<MeasureOp>(
+            builder.getUnknownLoc(), registers[qubitName], registers[cregName]);
+        std::cout << "Created Measure operation on qubit: " << qubitName
+                  << " and classical register: " << cregName << "\n";
+        // measure->dump();
       }
     }
-    // } else if (opname == "barrier") {
-    //   std::vector<Value> qubits;
-    //   for (const auto &qarg : op["qargs"]) {
-    //     std::string qubitName = qarg.get<std::string>();
-    //     if (registers.count(qubitName)) {
-    //       qubits.push_back(registers[qubitName]);
-    //     }
-    //   }
-    //   auto barrier = builder.create<BarrierOp>(builder.getUnknownLoc(),
-    //   qubits); barrier->dump();
-    // } else if (opname == "measure") {
-    //   std::string qubitName = op["qargs"][0].get<std::string>();
-    //   std::string cregName = op["cargs"][0].get<std::string>();
-    //   if (registers.count(qubitName) && registers.count(cregName)) {
-    //     builder.create<MeasureOp>(builder.getUnknownLoc(),
-    //     registers[qubitName],
-    //                               registers[cregName]);
-    //   }
-    //   auto measure = builder.create<MeasureOp>(
-    //       builder.getUnknownLoc(), registers[qubitName],
-    //       registers[cregName]);
-    //   measure->dump();
-    // }
   }
 
-  // Verify the module
+  // Add the required return operation to the end of the function.
+  builder.create<mlir::func::ReturnOp>(builder.getUnknownLoc());
+
+  // Verify the module.
   if (failed(verify(module))) {
     module->emitError("Module verification failed.");
     return nullptr;
@@ -186,10 +204,14 @@ int main(int argc, char **argv) {
     return 1;
   }
   json jsonData;
-  inputFile >> jsonData;
+  try {
+    inputFile >> jsonData;
+  } catch (json::parse_error &e) {
+    llvm::errs() << "JSON parse error: " << e.what() << "\n";
+    return 1;
+  }
 
   // Create an MLIR context and load the dialects.
-  // The corrected line: pass the registry to the context.
   MLIRContext context(registry);
   context.loadDialect<qasm::QASMDialect>();
   context.loadDialect<mlir::func::FuncDialect>();
@@ -204,18 +226,14 @@ int main(int argc, char **argv) {
 
   // Print the MLIR module to the output file.
   std::error_code EC;
-
   auto outputFile = std::make_unique<llvm::ToolOutputFile>(
       outputFilename.getValue(), EC, llvm::sys::fs::OF_None);
-
   if (EC) {
     llvm::errs() << EC.message() << "\n";
     return 1;
   }
-
-  // module->dump();
+  module->dump();
   // module->print(outputFile->os());
-
   // outputFile->keep();
 
   return 0;

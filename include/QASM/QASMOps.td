@@ -64,4 +64,22 @@ let arguments = (ins QubitType:$qubit, CRegType:$creg);
 let assemblyFormat = " $qubit `->` $creg attr-dict `:` type($qubit) `->` type($creg)";
 }
 
+// extract the bit at position index from the classical register
+def CRegExtractOp : QASMOp<"creg.extract", [MemoryEffects<[MemRead]>, NoTerminator]> {
+let summary = "Extracts a bit from a classical register.";
+let description = "Extracts the bit at a specified index from a classical register.";
+let arguments = (ins CRegType:$creg, I64Attr:$index);
+let results = (outs CBitType:$bit);
+let assemblyFormat = "$creg `[` $index `]` attr-dict `:` type($creg) `->` type($bit)";
+}
+
+// extract the qubit at position index from the quantum register
+def QRegExtractOp : QASMOp<"qreg.extract", [MemoryEffects<[MemRead]>, NoTerminator]> {
+let summary = "Extracts a qubit from a quantum register.";
+let description = "Extracts the qubit at a specified index from a quantum register.";
+let arguments = (ins QRegType:$qreg, I64Attr:$index);
+let results = (outs QubitType:$qubit);
+let assemblyFormat = "$qreg `[` $index `]` attr-dict `:` type($qreg) `->` type($qubit)";
+}
+
 #endif // QASM_QASMOPS_TD

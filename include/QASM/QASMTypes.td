@@ -25,7 +25,7 @@ let description = [{
 A quantum register of a specific size.
 }];
 let parameters = (ins TypeParameter<"int64_t", "size of reg">:$size);
-let assemblyFormat = " `<` $size `>` ";
+let assemblyFormat = " `qreg``<` $size `>` ";
 }
 
 // Represents a classical register of a specific size.
@@ -35,8 +35,16 @@ let description = [{
 A classical register of a specific size.
 }];
 let parameters = (ins TypeParameter<"int64_t", "size of reg">:$size);
+let assemblyFormat = " `creg``<` $size `>` ";
+}
 
-let assemblyFormat = " `<` $size `>` ";
+// Represents a measurement result (0 or 1) we will call it a cbit.
+def CBitType : QASM_Type<"CBit", "cbit"> {
+let summary = "Classical bit type.";
+let description = [{
+A classical bit (cbit) representing a measurement result (0 or 1).
+}];
+let assemblyFormat = " `cbit` ";
 }
 
 #endif // QASM_QASMTYPES_TD
