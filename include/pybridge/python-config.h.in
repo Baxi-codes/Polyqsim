@@ -1,0 +1,4 @@
+#pragma once
+
+#define PY_SCRIPT_DIR "@PY_SCRIPT_DIR@"
+

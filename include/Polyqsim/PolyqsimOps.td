@@ -40,4 +40,14 @@ def Polyqsim_FooOp : Polyqsim_Op<"foo", [Pure,
     }];
 }
 
+def Polyqsim_ApplyGateOp : Polyqsim_Op<"apply_gate"> {
+    let summary = "Apply a gate.";
+    let description = [{
+        Apply a quantum gate to qubits. All things go in attributes.
+    }];
+
+    let arguments = (ins );
+    let results = (outs );
+}
+
 #endif // POLYQSIM_OPS

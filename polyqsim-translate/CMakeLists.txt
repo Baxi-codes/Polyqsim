@@ -9,4 +9,5 @@ set(LIBS
 add_llvm_executable(polyqsim-translate polyqsim-translate.cpp)
 
 llvm_update_compile_flags(polyqsim-translate)
-target_link_libraries(polyqsim-translate PRIVATE ${LIBS})
+target_link_libraries(polyqsim-translate PRIVATE ${LIBS} pybridge)
+target_include_directories(polyqsim-translate PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
