@@ -6,8 +6,10 @@
 //
 //===----------------------------------------------------------------------===//
 
+#include "Polyqsim/Passes.h"
 #include "mlir/Dialect/Arith/IR/Arith.h"
 #include "mlir/Dialect/Func/IR/FuncOps.h"
+#include "mlir/Dialect/MemRef/IR/MemRef.h"
 #include "mlir/IR/MLIRContext.h"
 #include "mlir/InitAllDialects.h"
 #include "mlir/InitAllPasses.h"
@@ -22,10 +24,9 @@ int main(int argc, char **argv) {
   registry.insert<mlir::polyqsim::PolyqsimDialect>();
   registry.insert<mlir::func::FuncDialect>();
   registry.insert<mlir::arith::ArithDialect>();
-  // Add the following to include *all* MLIR Core dialects, or selectively
-  // include what you need like above. You only need to register dialects that
-  // will be *parsed* by the tool, not the one generated
-  // registerAllDialects(registry);
+  registry.insert<mlir::memref::MemRefDialect>();
+
+  mlir::polyqsim::registerPolyqsimPasses();
 
   return mlir::asMainReturnCode(
       mlir::MlirOptMain(argc, argv, "Polyqsim optimizer driver\n", registry));

@@ -1,3 +1,4 @@
+add_subdirectory(Passes)
 add_mlir_dialect_library(MLIRPolyqsim
         PolyqsimDialect.cpp
         PolyqsimOps.cpp
